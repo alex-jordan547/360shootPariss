@@ -1,0 +1,1016 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+
+    <section>
+        <div id="page-start-anchor"></div>
+        <!-- main hero start -->
+        <section class="hero hero-fullscreen jarallax" data-video="mp4:assets/video/v2.mp4" data-speed="0.2"
+                 style="min-height: calc(100vh - 140px)">
+            <div class="hero-background">
+                <img src="{{ asset('assets/img/test.jpg') }}" alt="hero background" class="jarallax-img"/>
+                <div class="hero-background-overlay" style="background-color: rgba(0,0,0,.5)"></div>
+            </div>
+            <div class="hero-foreground container d-flex flex-column justify-content-center">
+                <div class="py-14 py-md-23 py-lg-25 text-center text-lg-left">
+                    <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                        Vidéo 360°, Effet Slow Motion, Filtres personnalisés
+                    </small>
+                    <h1 class="fs-10 fs-lg-11 mt-6 mb-16 font-weight-bold text-white">VIDEO BOOTH 360°<br/>by 360 Shoot
+                        Paris</h1>
+                    <a href="#" class="boutton btn btn-lg bg-gradient">Réservez maintenant</a>
+                </div>
+            </div>
+        </section>
+        <!-- main hero end -->
+
+        <!-- "about" section start -->
+        <section class="section" id="qui-sommes-nous">
+            <div class="section-content container text-center">
+                <h1 class="mb-0 bleu">Bienvenue chez 360 Shoot Paris</h1>
+                <div class="row no-gutters mt-6 mt-md-10 mt-lg-17">
+                    <div class="col-12 col-lg-10 offset-0 offset-lg-1 ">
+                        <p class="bleu">Il s'agit d'un espace idéal pour écrire un texte long sur votre entreprise et
+                            vos services. Vous pouvez utiliser cet espace pour entrer un peu plus dans les détails de
+                            votre entreprise. Parlez de votre équipe et des services que vous proposez. Racontez à vos
+                            visiteurs comment vous avez eu l'idée de votre entreprise et ce qui vous différencie de vos
+                            concurrents. Faites en sorte que votre entreprise se distingue et se montre.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-content container mt-20">
+                <div class="image-slider">
+                    <a href="#" class="image-slider-prev d-none d-md-flex">
+                        <i class="material-icons">arrow_back</i>
+                    </a>
+                    <a href="#" class="image-slider-next d-none d-md-flex">
+                        <i class="material-icons">arrow_forward</i>
+                    </a>
+                    <div class="image-slider-contents">
+                        <div class="image-slider-item">
+                            <img src="{{ asset('assets/img/1.jpg') }}" alt="image" class="object-fit-cover w-100"
+                                 height="600"/>
+                        </div>
+                        <div class="image-slider-item">
+                            <img src="{{ asset('assets/img/2.jpg') }}" alt="image" class="object-fit-cover w-100"
+                                 height="600"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-primary p-19 p-lg-20 d-flex justify-content-between flex-column flex-lg-row bg-gradient">
+                    <p class="mb-lg-0 text-white" style="max-width: 700px">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis
+                        nostrud exercitation ullamco.</p>
+                    <a href="booking.html" class="btn bg-light bleu">Reserver maintenant</a>
+                </div>
+            </div>
+            <div class="section-content container mt-20">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    Ils nous ont fait confiance
+                </small>
+                <div class="d-flex align-items-center mt-8">
+                    <div class="card-slider card-slider-brands mr-0 mr-lg-23 flex-grow-1" id="brands-slider"
+                         data-options='{"contain":false,"groupCells":false,"wrapAround":true}'>
+                        <img src="{{ asset('assets/img/entreprises/igs.png') }}" class="card-slider-item"
+                             alt="Groupe IGS" style="height: 30px"/>
+                        <img src="{{ asset('assets/img/entreprises/epf.png') }}" class="card-slider-item"
+                             alt="EPF Ecole d'ingénieur" style="height: 30px"/>
+                        <img src="{{ asset('assets/img/entreprises/911.png') }}" class="card-slider-item"
+                             alt="911 Paris" style="height: 30px"/>
+                        <img src="{{ asset('assets/img/entreprises/ebene.png') }}" class="card-slider-item"
+                             alt="Yeux Ebene" style="height: 30px"/>
+                        <img src="{{ asset('assets/img/entreprises/sep.png') }}" class="card-slider-item" alt="Séphora"
+                             style="height: 30px"/>
+                    </div>
+                    <div class="flex-shrink-0 d-none d-lg-block">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                                    data-target="#brands-slider" data-action="prevSlide">
+                                <i class="material-icons">arrow_left</i>
+                            </button>
+                            <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                                    data-target="#brands-slider" data-action="nextSlide">
+                                <i class="material-icons">arrow_right</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- "about" section end -->
+
+        <!-- "services" section start -->
+        <section class="section bg-secondary" id="services">
+            <div class="section-content container text-center">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    Nos formules les plus populaires
+                </small>
+                <h1 class="bleu">Nos formules</h1>
+                <div class="row mt-15">
+                    <div class="col-12 col-md-4">
+                        <div class="card border-0" data-mh="service-cards">
+                            <div class="card-body">
+                                <h1 class="mt-0 fs-6 fs-lg-9" style="color: #6a5211 ">Bronze (2h)</h1>
+                                <div class="text-left">
+                                    <p>+ Masques et pistolets à billets disponibles</p>
+                                    <p>+ Vidéos illimitées avec filtre personnalisé</p>
+                                    <p>+ Éclairage LED professionnel et ring ligth</p>
+                                    <p>+ 2 hôtes ou hôtesses pour vous guider</p>
+                                    <p>+ Ecran de visionnage et partage vidéos</p>
+                                    <p>+ Téléchargement immédiat des vidéos</p>
+                                </div>
+
+                                <div class="d-flex justify-content-center align-items-start my-5">
+                                </div>
+                                <a href="#devis" class="btn btn-link" style="color: #6a5211 ">Reserver</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card border-0" data-mh="service-cards">
+                            <div class="card-body">
+                                <h1 class="mt-0 fs-6 fs-lg-9" style="color: silver">Silver (3h)</h1>
+                                <div class="text-left">
+                                    <p>+ Masques et pistolets à billets disponibles</p>
+                                    <p>+ Vidéos illimitées avec filtre personnalisé</p>
+                                    <p>+ Éclairage LED professionnel et ring ligth</p>
+                                    <p>+ 2 hôtes ou hôtesses pour vous guider</p>
+                                    <p>+ Ecran de visionnage et partage vidéos</p>
+                                    <p>+ Téléchargement immédiat des vidéos</p>
+                                    <p>+ Lunettes, chapeaux et déguisements</p>
+                                    <p>+ Videobooth et éclairage sans fils</p>
+                                </div>
+
+                                <div class="d-flex justify-content-center align-items-start my-5">
+                                </div>
+                                <a href="#devis" class="btn btn-link" style="color: silver">Reserver</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card border-0" data-mh="service-cards">
+                            <div class="card-body">
+                                <h1 class="mt-0 fs-6 fs-lg-9" style="color: gold">Gold (4h)</h1>
+                                <div class="text-left">
+
+                                    <p>+ Masques et pistolets à billets disponibles</p>
+                                    <p>+ Vidéos illimitées avec filtre personnalisé</p>
+                                    <p>+ Éclairage LED professionnel et ring ligth</p>
+                                    <p>+ Montage vidéo format téléphone 1 min</p>
+                                    <p>+ 2 hôtes ou hôtesses pour vous guider</p>
+                                    <p>+ Ecran de visionnage et partage vidéos</p>
+                                    <p>+ Téléchargement immédiat des vidéos</p>
+                                    <p>+ Lunettes, chapeaux et déguisements</p>
+                                    <p>+ Videobooth et éclairage sans fils</p>
+                                    <p>+ Filtre personnalisé dynamique</p>
+
+                                </div>
+
+                                <div class="d-flex justify-content-center align-items-start my-5">
+                                </div>
+                                <a href="#devis" class="btn btn-link" style="color: gold">Reserver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
+        <!-- "services" section end -->
+
+        <!-- "testimonials" section start -->
+        <section class="section" id="avis">
+            <div class="section-content container">
+                <div class="d-flex justify-content-center justify-content-sm-between align-items-center">
+                    <div class="text-center text-sm-left">
+                        <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Le meilleur videobooth parisien
+                        </small>
+                        <h1 class="bleu">Avis clients</h1>
+                    </div>
+                    <div class="d-none d-sm-block">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-light btn-square bleu" data-toggle="card-slider"
+                                    data-target="#testimonials-slider" data-action="prevSlide">
+                                <i class="material-icons">arrow_left</i>
+                            </button>
+                            <button type="button" class="btn btn-light btn-square bleu" data-toggle="card-slider"
+                                    data-target="#testimonials-slider" data-action="nextSlide">
+                                <i class="material-icons">arrow_right</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-slider card-slider-viewport card-slider-services mt-15" id="testimonials-slider">
+                    <article class="card-slider-item">
+                        <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                            <div class="card-body p-19 p-md-20 d-flex flex-column">
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ asset('assets/avis/alex.jpg') }}" alt="avatar" width="50"
+                                         class="rounded-circle"/>
+                                    <div class="ml-9">
+                                        <div class="bleu font-weight-medium fs-5 lh-5 mb-4">Alexandre COELHO</div>
+                                        <div class="text-muted fs-3 lh-4">Anniversaire</div>
+                                    </div>
+                                </div>
+                                <blockquote class="my-14">
+                                    <p class="bleu">“Incroyable 😍
+                                        Pour mon anniversaire nous avons fait appel à leurs services et vraiment pas
+                                        déçus!!
+                                        Je recommande vivement pour des super souvenirs 😉”</p>
+                                </blockquote>
+                                <div class="star-rating">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-slider-item">
+                        <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                            <div class="card-body p-19 p-md-20 d-flex flex-column">
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ asset('assets/avis/avatar.jpg') }}" alt="avatar" width="50"
+                                         class="rounded-circle"/>
+                                    <div class="ml-9">
+                                        <div class="bleu font-weight-medium fs-5 lh-5 mb-4">Armelle Kwedi</div>
+                                        <div class="text-muted fs-3 lh-4">Mariage</div>
+                                    </div>
+                                </div>
+                                <blockquote class="my-14">
+                                    <p class="bleu">“Merci infiniment pour la prestation, c'était magnifique. J'ai une
+                                        pote qui a
+                                        tellement kiffé, je ne doute pas qu'elle va booker chez vous. Ils se marient
+                                        bientôt je lui donne votre contact.”</p>
+                                </blockquote>
+                                <div class="star-rating mt-5">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-slider-item">
+                        <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                            <div class="card-body p-19 p-md-20 d-flex flex-column">
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ asset('assets/avis/yann.jpg') }}" alt="avatar" width="50"
+                                         class="rounded-circle"/>
+                                    <div class="ml-9">
+                                        <div class="bleu font-weight-medium fs-5 lh-5 mb-4">Yann M.</div>
+                                        <div class="text-muted fs-3 lh-4">Anniversaire</div>
+                                    </div>
+                                </div>
+                                <blockquote class="my-14">
+                                    <p class="bleu">“On a fait appel à cette équipe pour notre évènement et on a
+                                        clairement pas été
+                                        déçus. Mr Vidal est très professionnel et il fait tout pour vous mettre à l'aise
+                                        dès les premiers échanges. Son équipe est composée de gens très sympas
+                                        également. Je recommande clairement.”</p>
+                                </blockquote>
+                                <div class="star-rating mt-auto">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-slider-item">
+                        <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                            <div class="card-body p-19 p-md-20 d-flex flex-column">
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ asset('assets/avis/donia.jpg') }}" alt="avatar" width="50"
+                                         class="rounded-circle"/>
+                                    <div class="ml-9">
+                                        <div class="bleu font-weight-medium fs-5 lh-5 mb-4">Donia Fernandes</div>
+                                        <div class="text-muted fs-3 lh-4">Mariage</div>
+                                    </div>
+                                </div>
+                                <blockquote class="my-14">
+                                    <p class="bleu">“Bonjour, en espérant que vous allez bien. Merci beaucoup pour votre
+                                        travail
+                                        excellence. À très bientôt.”</p>
+                                </blockquote>
+                                <div class="star-rating mt-5">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- "testimonials" section end -->
+
+        <!-- "call to action" section start -->
+        <section class="section jarallax text-white" data-jarallax data-speed="0.2">
+            <img class="section-background-image jarallax-img" src="{{ asset('assets/img/book.jpg') }}"
+                 alt="background image"/>
+            <div class="section-background-color" style="background-color: rgba(0, 0, 0, 0.2)"></div>
+            <div class="section-content container text-center d-flex flex-column align-items-center">
+        <span
+                class="badge badge-pill badge-ghost fs-1  font-family-secondary text-uppercase font-weight-bold letter-spacing-caption">
+            Formulaire rapide de réservation
+        </span>
+                <h1 class="mt-5 mb-15 fs-9 fs-md-10">Prêt à pimenter votre évènement?</h1>
+                <a href="#" class="btn btn-lg bg-gradient text-light">Démandez un devis</a>
+            </div>
+        </section>
+        <!-- "call to action" section end -->
+
+        <!-- "our work" section start -->
+        <section class="section bg-secondary" id="notre-travail">
+            <div class="section-content text-center container">
+                <div class="d-flex justify-content-center justify-content-md-between align-items-end">
+                    <div class="text-center text-md-left">
+                        <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Nos bien aimés clients
+                        </small>
+                        <h1 class="bleu">Notre travail</h1>
+                    </div>
+                    <div class="d-none d-md-block">
+                        <div class="btn-group">
+                            <div class="radio-buttons-group border-0 " data-toggle="shuffle-grid"
+                                 data-target="#projects-grid">
+                                <button class="btn btn-light selected bleu" data-value="all">All</button>
+                                <button class="btn btn-light bleu" data-value="anniversaire">Anniversaire</button>
+                                <button class="btn btn-light bleu" data-value="mariage">Mariage</button>
+                                <button class="btn btn-light bleu" data-value="corporate">Corporate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shuffle-grid shuffle-grid-gap-14 shuffle-grid-cols-1 shuffle-grid-cols-md-2 shuffle-grid-cols-xl-4 mt-14"
+                     id="projects-grid" style="transform: translateY(0px)">
+                    <div class="shuffle-grid-item" data-groups="anniversaire">
+                        <div class="card  bg-transparent border-0 card-phater">
+                            <div class="card-bg" style="height: 100%; width: 100%">
+                                <video style="height: 100%; width: 100%" controls class="vid">
+                                    <source src="{{ asset('assets/video/Anniv 1.mp4') }}" type="video/mp4">
+                                    Error Message
+                                </video>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="shuffle-grid-item" data-groups="mariage">
+                        <div class="card  bg-transparent border-0 card-phater">
+                            <div class="card-bg" style="height: 100%; width: 100%">
+                                <video style="height: 100%; width: 100%" controls class="vid">
+                                    <source src="{{ asset('assets/video/mariage 1.mp4') }}" type="video/mp4">
+                                    Error Message
+                                </video>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="shuffle-grid-item" data-groups="corporate">
+                        <div class="card  bg-transparent border-0 card-phater">
+                            <div class="card-bg" style="height: 100%; width: 100%">
+                                <video style="height: 100%; width: 100%" controls class="vid">
+                                    <source src="{{ asset('assets/video/Corporate 1.mp4') }}" type="video/mp4">
+                                    Error Message
+                                </video>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="shuffle-grid-item" data-groups="corporate">
+                        <div class="card  bg-transparent border-0 card-phater">
+                            <div class="card-bg" style="height: 100%; width: 100%">
+                                <video style="height: 100%; width: 100%" controls class="vid">
+                                    <source src="{{ asset('assets/video/Corporate 2.mp4') }}" type="video/mp4">
+                                    Error Message
+                                </video>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="shuffle-grid-item" data-groups="anniversaire">
+                        <div class="card  bg-transparent border-0 card-phater">
+                            <div class="card-bg" style="height: 100%; width: 100%">
+                                <video style="height: 100%; width: 100%" controls class="vid">
+                                    <source src="{{ asset('assets/video/Anniv 2.mp4') }}" type="video/mp4">
+                                    Error Message
+                                </video>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="shuffle-grid-item" data-groups="mariage">
+                        <div class="card  bg-transparent border-0 card-phater">
+                            <div class="card-bg" style="height: 100%; width: 100%">
+                                <video style="height: 100%; width: 100%" controls class="vid">
+                                    <source src="{{ asset('assets/video/mariage 2.mp4') }}" type="video/mp4">
+                                    Error Message
+                                </video>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="shuffle-grid-item" data-groups="corporate">
+                        <div class="card  bg-transparent border-0 card-phater">
+                            <div class="card-bg" style="height: 100%; width: 100%">
+                                <video style="height: 100%; width: 100%" controls class="vid">
+                                    <source src="{{ asset('assets/video/Corporate 3.mp4') }}" type="video/mp4">
+                                    Error Message
+                                </video>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="shuffle-grid-item" data-groups="mariage">
+                        <div class="card bg-transparent border-0 card-phater">
+                            <div class="card-bg " style="height: 100%; width: 100%">
+                                <video style="height: 100%; width: 100%" controls class="vid">
+                                    <source src="{{ asset('assets/video/mariage 4.mp4') }}" type="video/mp4">
+                                    Error Message
+                                </video>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- "our work" section end -->
+
+        <!-- "frequently asked questions" section start -->
+        <section class="section" id="faq">
+            <div class="section-content container">
+                <h1 class="mb-17 text-center bleu">FAQ</h1>
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <article class="faq faq-open">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-1"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Peut-on mettre notre propre téléphone pour filmer?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse show" id="faq-item-1">
+                                <p>La réponse est non car nous utilisons un <span class="font-weight-bold"
+                                                                                  style="color: #fc3f84">téléphone professionnel</span>
+                                    muni d'un logiciel qui effectue les montages vidéos et ajoute les effets incroyables
+                                    que vous voyez sur nos vidéos. </p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-2"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Comment faire pour récupérer vos vidéos?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-2">
+                                <p>Un hôte ou une hôtesse muni d'une tablette est mis à disposition pour aider les
+                                    invités à récupérer leurs vidéos. <br/>
+                                    L'envoie est instantanné et se fait via <span class="font-weight-bold"
+                                                                                  style="color: #fc3f84">QR code, Airdrop, SMS et email.</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-3"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Comment entrer en contact avec vous pour réserver?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-3">
+                                <p>Le moyen le plus efficace pour nous contacter est via whatsapp à ce numéro
+                                    <span class="font-weight-bold" style="color: #fc3f84">0636221529.</span> <br/>
+                                    Vous pouvez également nous contacter par SMS ou par téléphone à ce même numéro.<br/>
+                                    Vous avez également notre email qui est
+                                    <span class="font-weight-bold" style="color: #fc3f84">360shootparis@gmail.com</span>
+                                    on vous répond sous 24h max.</p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-4"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Comment réserver la date de mon évènement?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-4">
+                                <p> Une fois le devis validé par les 2 parties,
+                                    un acompte de <span class="font-weight-bold" style="color: #fc3f84">120€</span> est
+                                    demandé pour bloquer définitivement la date de l'évènement.<br/>
+                                    Le règlement total de la facture doit être dû maximum <span class="font-weight-bold"
+                                                                                                style="color: #fc3f84">48h</span>
+                                    avant la prestation. </p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-5"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Comment se passe l'installation?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-5">
+                                <p><span class="font-weight-bold" style="color: #fc3f84">45 min</span> suffisent pour
+                                    que notre dispositif soit en place et fonctionnel.<br/>
+                                    Notre kit d'installation de base comprend notre <span class="font-weight-bold"
+                                                                                          style="color: #fc3f84">machine</span>,
+                                    un <span class="font-weight-bold" style="color: #fc3f84">tapis rouge</span>, des
+                                    <span class="font-weight-bold" style="color: #fc3f84">poteaux de guidages</span>, 4
+                                    <span class="font-weight-bold" style="color: #fc3f84">projecteurs de lumières</span>
+                                    et une <span class="font-weight-bold"
+                                                 style="color: #fc3f84">station de partage</span> qui abrite un
+                                    ipad.<br/>
+
+                                    Nous installons autant en <span class="font-weight-bold" style="color: #fc3f84">intérieur</span>
+                                    qu'en <span class="font-weight-bold" style="color: #fc3f84">extérieur</span> à
+                                    condition d'avoir une prise de courant disponible.</p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-11"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Quel est le nombre d'heures minimum à réserver?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-11">
+                                <p><span class="font-weight-bold" style="color: #fc3f84">La réponse est 2h </span><br/>
+                                    Ces 2h correspondent à la durée de la prestation et ne comprend pas le temps de
+                                    l'installation et du rangement du matériel à la fin de la prestation.<br/>
+
+                                    Donc en réalité une prestation de 2h nous demande <span class="font-weight-bold"
+                                                                                            style="color: #fc3f84">4h de travail</span>,
+                                    minimum.</p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-12"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Est-ce qu'on peut mettre la machine en pause?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-12">
+                                <p><span class="font-weight-bold" style="color: #fc3f84">La réponse est NON!</span><br/>
+                                    Si vous faites une pause pour que les invités se restaurent ou pour toute autre
+                                    activité qui nécessite l'arrêt de la machine, ce laps de temps vous sera facturé.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-6"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">De quel espace avez-vous besoin?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-6">
+                                <p><span class="font-weight-bold" style="color: #fc3f84">5 mètres carrés</span> c'est
+                                    l'espace dont nous avons besoin pour notre installation.<br/>
+                                    Celle-ci doit également se faire sur un <span class="font-weight-bold"
+                                                                                  style="color: #fc3f84">terrain plat.</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-7"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Comment fonctionne le 360?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-7">
+                                <p><span class="font-weight-bold" style="color: #fc3f84">Le  360</span> est une caméra
+                                    qui tourne autour de vous pour capturer absolument tous les angles.<br/>
+                                    Vous allez vous tenir sur une <span class="font-weight-bold" style="color: #fc3f84">plateforme</span>
+                                    qui est une sorte de podium avec bras motorisé muni d'une caméra dernière génération
+                                    qui va venir tourner autour de vous.<br/>
+                                    Il en resultera des effets <span class="font-weight-bold" style="color: #fc3f84"> slow motion, reverse, vitesse accélérée etc...</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-8"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Quelle charge peut supporter le 360?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-8">
+                                <p>Notre plateforme peut supporter jusqu'à <span class="font-weight-bold"
+                                                                                 style="color: #fc3f84">4</span>
+                                    personnes.<br/>
+                                    Vous pourrez faire des <span class="font-weight-bold" style="color: #fc3f84">vidéos uniques</span>
+                                    accompagnés de vos amis. </p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-9"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Est ce qu'il y a moyen de mettre notre propre logo?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-9">
+                                <p>La réponse est un grand <span class="font-weight-bold"
+                                                                 style="color: #fc3f84">OUI</span>. Nous concoctons un
+                                    magnifique <span class="font-weight-bold"
+                                                     style="color: #fc3f84">filtre personnalisé</span> pour chacun de
+                                    nos évènements.<br/>
+                                    <span class="font-weight-bold" style="color: #fc3f84">Les Particuliers</span> <br/>
+                                    Vous avez la possibilité d'obtenir un filtre unique dans le thème de votre
+                                    évènement.<br/>
+                                    <span class="font-weight-bold" style="color: #fc3f84">Les professionnels</span>
+                                    <br/>
+                                    Donnez un gros coup de boost à votre marque et utilisez ce filtre pour vous
+                                    démarquer de la concurrence.</p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-10"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Est ce que la plateforme tourne?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-10">
+                                <p><span class="font-weight-bold" style="color: #fc3f84">Haha non!!</span><br/> ne vous
+                                    inquiétez pas vous n'allez pas tomber.<br/>
+                                    La plateforme est fixe et stable c'est uniquement le bras motorisé qui tourne autour
+                                    de vous et il se lance et s'arrête <span class="font-weight-bold"
+                                                                             style="color: #fc3f84">automatiquement.</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-13"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Comment comment recevoir un devis?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-13">
+                                <p>Écrivez-nous par mail à<br/> <span class="font-weight-bold" style="color: #fc3f84">360shootparis@gmail.com</span>
+                                    ou par message au <span class="font-weight-bold"
+                                                            style="color: #fc3f84">0636221529.</span><br/>
+                                    En précisant :<br/>
+                                    - Votre nom complet<br/>
+                                    - Votre numéro de téléphone<br/>
+                                    - La date et le type l'évènement<br/>
+                                    - L'adresse du lieu de l'évènement<br/>
+                                    - Le nombres d'invités présents<br/>
+                                    - Le nombre d'heures souhaitées<br/>
+                                </p>
+                            </div>
+                        </article>
+                        <article class="faq">
+                            <header class="faq-header " data-toggle="collapse" data-target="#faq-item-14"
+                                    aria-expanded="true">
+                                <h1 class="faq-title bleu">Avez vous un exemple de mail type pour un devis?</h1>
+                                <div class="faq-toggle">
+                                    <i class="material-icons faq-toggle-closed bleu">add</i>
+                                    <i class="material-icons faq-toggle-open bleu">remove</i>
+                                </div>
+                            </header>
+                            <div class="faq-body collapse " id="faq-item-14">
+                                <p><span class="font-weight-bold" style="color: #fc3f84">Bonjour,</span> <br/>
+                                    je suis Mme <span class="font-weight-bold"
+                                                      style="color: #fc3f84">Élise DUPONT</span>, je prépare mon mariage
+                                    qui est prévu pour le <span class="font-weight-bold" style="color: #fc3f84">15 juillet 2022</span>
+                                    au <span class="font-weight-bold"
+                                             style="color: #fc3f84">Chateau de Versailles</span>. Les invités seront au
+                                    nombre de <span class="font-weight-bold"
+                                                    style="color: #fc3f84">100</span>. Nous sommes très intéréssés par
+                                    votre service et aimerions savoir combien cela nous coûtera de reserver <span
+                                            class="font-weight-bold"
+                                            style="color: #fc3f84">3h</span> avec vous? <br/>
+                                    Je laisse mon numéro de téléphone si besoin : <span class="font-weight-bold"
+                                                                                        style="color: #fc3f84">06 36 22 15 29</span>
+
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- "frequently asked questions" section end -->
+
+        <!-- "formations" section start -->
+        <section class="section " id="nos-formations">
+            <div class="section-content container border-bottom border-top p-10">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    Formations
+                </small>
+                <h1 class="bleu">Nos formations</h1>
+
+                <div class="row mt-17 tour-tabs">
+                    <div class="col-12 col-lg-4 pr-lg-0">
+                        <div class="tour-tabs-nav tour-tabs-nav-left nav">
+                            <a href="#tour-tab-1" class="tour-tabs-nav-link active" data-toggle="pill">
+                                <div>
+                                    <img src="{{ asset('assets/formations/1.png') }}" alt="avatar 1" width="50"
+                                         height="50"
+                                         class="rounded-circle"/>
+                                </div>
+                                <div class="ml-9">
+                                    <h2 class="fs-5 mb-1 bleu">Formule complète</h2>
+                                    <p class="mb-0 text-muted fs-3">2 jours</p>
+                                </div>
+                            </a>
+                            <a href="#tour-tab-2" class="tour-tabs-nav-link " data-toggle="pill">
+                                <div>
+                                    <img src="{{ asset('assets/formations/2.png') }}" alt="avatar 1" width="50"
+                                         height="50"
+                                         class="rounded-circle"/>
+                                </div>
+                                <div class="ml-9">
+                                    <h2 class="fs-5 mb-1 bleu">Formule à la demande</h2>
+                                    <p class="mb-0 text-muted fs-3">3 heures</p>
+                                </div>
+                            </a> <a href="#tour-tab-3" class="tour-tabs-nav-link " data-toggle="pill">
+                                <div>
+                                    <img src="{{ asset('assets/formations/3.png') }}" alt="avatar 1" width="50"
+                                         height="50"
+                                         class="rounded-circle"/>
+                                </div>
+                                <div class="ml-9">
+                                    <h2 class="fs-5 mb-1 bleu">Réparation et maintenance</h2>
+                                    <p class="mb-0 text-muted fs-3">N/A</p>
+                                </div>
+                            </a>
+                            </a> <a href="#tour-tab-4" class="tour-tabs-nav-link " data-toggle="pill">
+                                <div>
+                                    <img src="{{ asset('assets/formations/4.png') }}" alt="avatar 1" width="50"
+                                         height="50"
+                                         class="rounded-circle"/>
+                                </div>
+                                <div class="ml-9">
+                                    <h2 class="fs-5 mb-1 bleu">Filtres personnalisés</h2>
+                                    <p class="mb-0 text-muted fs-3">N/A</p>
+                                </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8 pl-lg-0 mt-14 mt-lg-0 d-flex">
+                        <div class="tour-tabs-content tour-tabs-content-right tab-content">
+                            <div class="tab-pane fade show active" id="tour-tab-1">
+                                <div class="row">
+                                    <div class="col-12 col-sm-5">
+                                        <img src="{{ asset('assets/formations/1.png') }}" alt="team member photo"
+                                             class="w-100 h-100 object-fit-cover"/>
+                                    </div>
+                                    <div class="col-12 col-sm-7 mt-14 mt-sm-0">
+                                        <h2 class="fs-6 fs-lg-9 bleu">Formule complète</h2>
+                                        <div class="fs-5 text-muted">2 jours</div>
+                                        <p class="mt-8 bleu">Une formation complète qui s’étend sur 2 jours (en
+                                            présentiel si
+                                            tu es en Ile de France sinon en ligne) dans laquelle on te guide sur tous
+                                            les aspects de ce business.</p>
+                                        <p class="bleu">On commence par le choix de la forme juridique
+                                            de ta société en passant par le choix du matériel adéquat pour démarrer, le
+                                            design, le marketing des réseaux sociaux et on termine sur la rédaction de
+                                            devis et contrats clients.</p>
+                                        <p class="bleu">Pour en savoir plus écris-nous sur notre WhatsApp en nous
+                                            expliquant ta
+                                            problématique et donne-nous tes disponibilités.</p>
+
+                                        <a href="https://wa.me/0636221529?text=Bonjour,%20je%20suis%20intérressé%20par%20votre%20formule%20complète!"
+                                           class="btn btn-link bleu" target="_blank">Nous contacter</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tour-tab-2">
+                                <div class="row">
+                                    <div class="col-12 col-sm-5">
+                                        <img src="{{ asset('assets/formations/2.png') }}" alt="team member photo"
+                                             class="w-100 h-100 object-fit-cover"/>
+                                    </div>
+                                    <div class="col-12 col-sm-7 mt-14 mt-sm-0">
+                                        <h2 class="fs-6 fs-lg-9 bleu">Formule à la demande</h2>
+                                        <div class="fs-5 text-muted">3 heures</div>
+                                        <p class="mt-8 bleu">Ici il s’agit de packs de 3h sur 2 séances de 1h30 chacune
+                                            au
+                                            cours desquelles on va aborder la thématique de ton choix.</p>
+                                        <p class="bleu">Que ça soit l’utilisation de ton matériel, le design des
+                                            filtres, la
+                                            recherche des clients ou encore la rédaction des devis et contrats. La
+                                            formation se fait aussi bien en physique (si tu es en Ile de France) qu’en
+                                            ligne.</p>
+                                        <p class="bleu">S’il y’a d’autres thématiques sur lesquelles tu as des problèmes
+                                            n’hésite pas
+                                            à nous contacter et nous te diront sur on peut t’aider au pas.</p>
+
+                                        <a href="https://wa.me/0636221529?text=Bonjour,%20je%20suis%20intérressé%20par%20votre%20formule%20à%20la%20demande!"
+                                           class="btn btn-link bleu" target="_blank">Nous contacter</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="tour-tab-3">
+                                <div class="row">
+                                    <div class="col-12 col-sm-5">
+                                        <img src="{{ asset('assets/formations/3.png') }}" alt="team member photo"
+                                             class="w-100 h-100 object-fit-cover"/>
+                                    </div>
+                                    <div class="col-12 col-sm-7 mt-14 mt-sm-0">
+                                        <h2 class="fs-6 fs-lg-9 bleu">Réparation et maintenance</h2>
+                                        <div class="fs-5 text-muted">N/A</div>
+                                        <p class="mt-8 bleu">Ton Videobooth a un souci ? N’hésite pas à nous donner plus
+                                            de
+                                            détails Nous avons au sein de l’équipe un ingénieur en génie électrique
+                                            capable de diagnostiquer les pannes mineures et si besoin on peut aussi vous
+                                            fournir des pièces de remplacement. </p>
+                                        <a href="https://wa.me/0636221529?text=Bonjour,%20j'ai%20un%20problème%20avec%20mon%20videobooth%20."
+                                           class="btn btn-link bleu" target="_blank">Nous contacter</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="tour-tab-4">
+                                <div class="row">
+                                    <div class="col-12 col-sm-5">
+                                        <img src="{{ asset('assets/formations/4.png') }}" alt="team member photo"
+                                             class="w-100 h-100 object-fit-cover"/>
+                                    </div>
+                                    <div class="col-12 col-sm-7 mt-14 mt-sm-0">
+                                        <h2 class="fs-6 fs-lg-9 bleu">Filtres personnalisés</h2>
+                                        <div class="fs-5 text-muted">N/A</div>
+                                        <p class="mt-8 bleu">Tu as un évènement qui arrive et tu galères à réaliser un
+                                            joli
+                                            filtre ou tu n’as tout simplement pas le temps de le faire ? Nos designers
+                                            s’occupent de tout.</p>
+                                        <p class="bleu">Envoie-nous tous les détails sur WhatsApp et en 48h ton filtre
+                                            est prêt.</p>
+
+                                        <a href="https://wa.me/0636221529?text=Bonjour,%20j'ai%20besoin%20d'un%20filtre."
+                                           class="btn btn-link bleu" target="_blank">Nous contacter</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- "formations" section end -->
+
+        <!-- "contacts" section start -->
+        <section class="section" id="devis">
+            <div class="section-content container">
+                <div class="row">
+                    <div class="col-12 col-lg-8 mb-14 mb-lg-0">
+                        <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            We answer within 24 hours
+                        </small>
+                        <h1>Contact Us</h1>
+                        <form action="#" class="row mt-17">
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label for="first_name" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="first_name"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label for="last_name" class="form-label">Last name</label>
+                                    <input type="text" class="form-control" id="last_name"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="text" class="form-control" id="phone"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="email"/>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea id="message" class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="custom-checkbox" id="exampleCheck2" checked/>
+                                    <label class="form-check-label" for="exampleCheck2">
+                                        I've read and agree with the <a href="#">Terms & Policy</a>
+                                    </label>
+                                </div>
+                                <div class="form-group mb-0">
+                                    <button class="btn btn-primary btn-lg">Send message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="card border-0 bg-secondary mb-4 ml-lg-9">
+                            <div class="card-body py-17 px-10 text-center">
+                                <div class="card-icon mb-6"><i class="material-icons">map</i></div>
+                                <div
+                                        class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                                    Our address
+                                </div>
+                                <p class="mb-0 text-body">Brooklyn, NY 11204. 9359<br/>Hollow Lane. NY 11706.</p>
+                            </div>
+                        </div>
+                        <div class="card border-0 bg-secondary mb-4 ml-lg-9">
+                            <div class="card-body py-17 px-10 text-center">
+                                <div class="card-icon mb-6"><i class="material-icons">phone</i></div>
+                                <div
+                                        class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                                    Mobile Phone
+                                </div>
+                                <p class="mb-0 text-body">(917) 494 - 4476</p>
+                            </div>
+                        </div>
+                        <div class="card border-0 bg-secondary ml-lg-9">
+                            <div class="card-body py-17 px-10 text-center">
+                                <div class="card-icon mb-6"><i class="material-icons">access_time</i></div>
+                                <div
+                                        class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                                    Working Hours
+                                </div>
+                                <p class="mb-0 text-body">11:00 AM - 9:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- "contacts" section end -->
+    </section>
+
+{% endblock %}

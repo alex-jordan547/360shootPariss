@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>{% block title %}360 Shoot Paris {% endblock %}</title>
+    <link rel="icon" href="{{ asset('assets/favicon.ico') }}">
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+
+        <link href="{{ asset('assets/css/vendor.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+
+
+        <link href="{{ asset('assets/fonts/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+        {#            <link type="text/css" href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.css" rel="stylesheet"> #}
+
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body data-spy="scroll" data-target="#header-navbar" data-offset="140">
+{% include 'layouts/header.html.twig' %}
+{% block body %}{% endblock %}
+{% include 'layouts/footer.html.twig' %}
+
+<script src="{{ asset('assets/js/vendor.js') }}"></script>
+<script src="{{ asset('assets/js/polyfills.js') }}"></script>
+<script src="{{ asset('assets/js/app.js') }}"></script>
+<script src="{{ asset('assets/js/custom.js') }}"></script>
+</body>
+
+</html>
