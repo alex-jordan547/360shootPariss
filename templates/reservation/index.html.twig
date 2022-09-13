@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <div class="mb-25 mt-10 px-5">
+        <table class="table table-hover" id="resa">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nom & Prénom</th>
+                <th scope="col">Evenement</th>
+                <th scope="col">Date prévue</th>
+                <th scope="col">Durée</th>
+                <th scope="col">Invités</th>
+                <th scope="col">Lieu</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Thème</th>
+                <th scope="col">Préférence</th>
+                <th scope="col">Moyen</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for key,reservation in reservations %}
+                <tr>
+                    <th scope="row">{{ key + 1 }}</th>
+                    <td>{{ reservation.fullname }}</td>
+                    <th>{{ reservation.type }}</th>
+                    <th>{{ reservation.date|date('d/m/Y') }}</th>
+                    <td>{{ reservation.hours }} {% if reservation.hours > 0 %} h {% endif %}</td>
+                    <td>{{ reservation.participants }}</td>
+                    <td>{{ reservation.address }}</td>
+                    <th>{{ reservation.email }}</th>
+                    <th>{{ reservation.phone }}</th>
+                    <td>{{ reservation.theme }}</td>
+                    <td>{{ reservation.reach }}</td>
+                    <td>{{ reservation.moyen }}</td>
+                    <td class="text-center"><a title="Supprimer la ligne"
+                                               onclick="return confirm('Confirmer la suppression?')"
+                                               href="{{ path('app_reservation_delete',{ id: reservation.id }) }}"><img
+                                    src="{{ asset('assets/img/trash.png') }}" width="20" alt=""></a></td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#resa').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/French.json"
+                },
+                "responsive": true,
+
+
+            });
+        });
+    </script>
+
+
+{% endblock %}
+

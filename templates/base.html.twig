@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="author" content="Alex Jordan Tsague"/>
+    <meta name="publisher" content="alextsague98@gmail.com"/>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description"
+          content="Fais de ta vision une réalité avec 360 Shoot Paris, Le service Videobooth le mieux noté de Paris. Anniversaires, mariages, événements d’entreprises et autres">
+    <meta name="keywords"
+          content="360 Shoot Paris, animation, videobooth, photobooth, mariages, évènements, vidéos 360° effets, ralenti, slow motion, filtre, personnalisé, 360 spinner, caméra 360, ringlight 360, évènementiel, Wedding planner, promoteur, soirées, fêtes, gala, fiançailles, vin d’honneur, cérémonie, brunch">
     <title>{% block title %}360 Shoot Paris {% endblock %}</title>
-    <link rel="icon" href="{{ asset('assets/favicon.ico') }}">
+    <link rel="icon" href="{{ asset('assets/favicon.svg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/favicon-apple.svg') }}"/>
+
+
     {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
 
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
         <link href="{{ asset('assets/css/vendor.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
-
-
         <link href="{{ asset('assets/fonts/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
-        {#            <link type="text/css" href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.css" rel="stylesheet"> #}
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
+              integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
+              crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+              integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
+              crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+
 
     {% endblock %}
 
@@ -27,6 +44,23 @@
 </head>
 <body data-spy="scroll" data-target="#header-navbar" data-offset="140">
 {% include 'layouts/header.html.twig' %}
+{# Notification #}
+{% for message in app.flashes('success') %}
+    <div id="success-box">
+        <div class="face">
+            <div class="eye"></div>
+            <div class="eye right"></div>
+            <div class="mouth happy"></div>
+        </div>
+        <div class="shadow scale"></div>
+        <div class="message ">
+            <h4 class="alert">L'équipe 360 Shoot Paris vous remercie!</h4>
+
+        </div>
+        <button class="button-box bleu">Fermer</button>
+    </div>
+{% endfor %}
+
 {% block body %}{% endblock %}
 {% include 'layouts/footer.html.twig' %}
 
@@ -34,6 +68,30 @@
 <script src="{{ asset('assets/js/polyfills.js') }}"></script>
 <script src="{{ asset('assets/js/app.js') }}"></script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // you may need to change this code if you are not using Bootstrap Datepicker
+        $('.js-datepicker').datepicker({
+            format: 'yyyy-mm-dd',
+
+        });
+        $('#resa').DataTable();
+        $('#success-box').click(() => {
+            $('#success-box').hide();
+        })
+    });
+</script>
 </body>
 
 </html>

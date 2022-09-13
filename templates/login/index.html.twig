@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container px-0 px-lg-25">
+        <h1 class="text-center bleu fs-7 fs-md-10"> Formulaire de connexion </h1>
+
+        {% if error %}
+            <div class="bg-gradient rounded text-light  text-center p-1">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        <form action="{{ path('app_login') }}" class="row my-17" method="post">
+            <div class="col-12 ">
+                <div class="form-group">
+                    <label class="form-label" for="username">Email:</label>
+                    <input type="text" id="username" class="form-control" name="_username" value="{{ last_username }}"/>
+                </div>
+            </div>
+            <div class="col-12 ">
+                <div class="form-group">
+                    <label for="password" class="form-label">Mot de passe:</label>
+                    <input type="password" id="password" class="form-control" name="_password"/>
+                </div>
+            </div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            {# If you want to control the URL the user is redirected to on success
+        <input type="hidden" name="_target_path" value="/account"/> #}
+            <div class="col-12 text-center text-md-left mt-5 mt-md-0">
+                <div class="form-group mb-0 mr-auto">
+                    <button class="btn bg-gradient btn-lg text-light" type="submit">Se connecter</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

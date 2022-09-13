@@ -15,10 +15,8 @@
 
                     <span class="navbar-text text-uppercase d-flex align-items-center">
                                 <span class="text-white-70 mr-1">Nous contacter:</span>
-                                <span class="text-white mr-1">06 36 22 15 29</span>
+                                <span class="text-light mr-1">06 36 22 15 29</span>
                                 <i class="material-icons fs-1">phone</i>
-
-
                                 <span class="text-white mr-1 d-none d-md-inline-block">  &nbsp; - &nbsp; 360shootparis@gmail.com</span>
                                 <i class="material-icons fs-1 d-none d-md-inline-block">email</i>
                     </span>
@@ -30,7 +28,7 @@
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand-lg navbar-light w-100" id="header-navbar">
-                    <a class="navbar-brand font-weight-bold" href="#page-start-anchor" data-toggle="smooth-scroll">
+                    <a class="navbar-brand font-weight-bold" href="{{ path('app_home') }}">
                         <img src="{{ asset('assets/logo/logo texte.png') }}" width="260" alt="">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -42,10 +40,10 @@
                         <ul class="navbar-nav ml-auto ">
                             <li class="nav-item">
                                 <a class="nav-link text-uppercase active " data-toggle="smooth-scroll"
-                                   href="#qui-sommes-nous">Qui sommes nous ?</a>
+                                   href="#qui-sommes-nous">Notre entreprise</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-uppercase " data-toggle="smooth-scroll" href="#services">Services</a>
+                                <a class="nav-link text-uppercase " data-toggle="smooth-scroll" href="#services">Formules</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-uppercase " data-toggle="smooth-scroll" href="#avis">Avis</a>
@@ -63,6 +61,11 @@
                             <li class="nav-item"><a class="nav-link text-uppercase" data-toggle="smooth-scroll"
                                                     href="#devis">Devis</a>
                             </li>
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                <li class="nav-item"><a class="nav-link text-uppercase"
+                                                        href="{{ path('app_logout') }}">logout</a>
+                                </li>
+                            {% endif %}
 
                         </ul>
                     </div>

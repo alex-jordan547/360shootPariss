@@ -2,16 +2,35 @@
 
 namespace App\Controller;
 
+use App\Entity\Reservation;
+use App\Form\ReservationType;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
-    #[Route('/', name: 'app_home')]
-    public function index(): Response
+    #[Route('/', name: 'app_home', methods: ['POST', 'GET'])]
+    public function index(Request $request, EntityManagerInterface $em): Response
     {
-        return $this->render('home/index.html.twig');
+        $reservation = new Reservation();
+
+        $form = $this->createForm(ReservationType::class, $reservation);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            //  dd($form->getData());
+            $reservation = $form->getData();
+            $em->persist($reservation);
+            $em->flush();
+            $this->addFlash('success', 'Reservation');
+            return $this->redirect($request->getUri());
+        }
+        return $this->render('home/index.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
 }
